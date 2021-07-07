@@ -1,0 +1,32 @@
+<!-- D:\django\src\templates\index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <strong>this is home page.</strong>
+
+    <h2>Let's try some cool thing</h2>
+    <p>
+        <pre>test text   : {{ my_text }}</pre>
+        <pre>test number : {{ my_num }}</pre>
+        <pre>test list   : {{ my_list }}</pre>
+    </p>
+
+    <h2>try for loop in template</h2>
+    <ul>
+        {% for item in my_list %}
+        <li>{{ forloop.counter}} - {{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>try condiction in template</h2>
+    <ul>
+        {% for i in my_list2 %}
+            {% if i < 6 %}
+            <li style="color:red">{{ i }}</li>
+            {% else %}
+            <li style="color:blue">{{ i }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
