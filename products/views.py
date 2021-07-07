@@ -4,7 +4,7 @@ from .models import Product
 
 # Create your views here.
 def product_detail_view(request):
-    obj = Product.object.get()
+    obj = Product
     context = {
         'title': obj.title,
         'discription': obj.discription,
