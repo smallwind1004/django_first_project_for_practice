@@ -2,8 +2,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <h1>Search using Google</h1>
-<form action="https://www.google.com/search" method="GET">
+<form action="https://www.google.com/search" method="GET">{% csrf_token %}
     <input type="text" name="q" placeholder="Your search">
     <input type="submit" value="Save">
 </form>
